@@ -7,6 +7,10 @@ Antes de inicializar a aplicação é necessário criar o arquivo .env a partir 
 as configurações do .env fica a sua escolha, mas alerto para não esquecer de alterar as configurações,<br />
 da conneção do banco mysql, ficaria algo parecido com isso<br />
 
+comando de cópia linux:<br />
+cp .env.exemple .env
+
+
 DB_CONNECTION=mysql<br />
 DB_HOST=db<br />
 DB_PORT=3306<br />
