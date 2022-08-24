@@ -1,7 +1,5 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -13,6 +11,15 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+/** @var \Laravel\Lumen\Routing\Router $router */
+$router->group(['prefix' => 'clients'], function () use ($router) {
+    $router->post('/uploadFile', 'ClientController@uploadFile');
+    $router->get('/findByPaginate/{page}', 'ClientController@findByPaginate');
+    $router->get('/findGraphItems', 'ClientController@findGraphItems');
+});
+/**
+ * Always the last route! Loads Vue Application.
+ */
+$router->get('/{route:.*}/', function () {
+    return view('app');
 });

@@ -1,17 +1,25 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "name": "rufusmaiwald/lumen-vue-cli",
+    "description": "The Laravel Lumen Framework as backend API with Vue.js using vue-cli included",
+    "keywords": ["framework", "laravel", "lumen", "vue", "vue-cli"],
     "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Rufus Maiwald",
+            "email": "dev@rufusmaiwald.de",
+            "homepage": "https://rufusmaiwald.de"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/lumen-framework": "^8.3.1"
+        "laravel/lumen-framework": "^8.0",
+        "nordsoftware/lumen-cors": "^3.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.3"
     },
     "autoload": {
         "psr-4": {
